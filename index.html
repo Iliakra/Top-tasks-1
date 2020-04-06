@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css"/>
+</head>
+<body>
+    <div class="top-container">
+        <div class="top-tasks">
+            <h1>TOP Tasks</h1>
+            <form class="input-row">
+                <input type="text" name="task" id="insert-field" required>
+                <div class="empty-form empty">
+                    <p>Для отправки задачи введите текст!</p>
+                </div>
+            </form>
+            <div class="pinned-container">
+                <h2>Pinned</h2>
+                <p class="hint">No pinned tasks</p>
+            </div>
+            <div class="all-tasks-container">
+                <h2>All tasks</h2>
+                <p class="all-tasks-hint hint-not-found">No tasks found</p>
+            </div>
+        </div>
+    </div>
+    <script src="./src/index.js"></script>  
+</body>
+</html>

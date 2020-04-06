@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.top-container {
+    width: 200px;
+    margin-left: 15px;
+}
+
+.top-tasks {
+    width: 100%;
+    position: relative;
+}
+
+[name='task'] {
+    border: 1px solid grey;
+    padding: 7px 0;
+}
+
+.task-div {
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 12px;
+    justify-content: space-between;
+    padding: 5px 0;
+    position: relative;
+}
+
+.task-div p {
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+.hint {
+    display: block;
+}
+
+.hint-remove, .hint-not-found, .div-remove, .empty {
+    display: none;
+}
+
+#insert-field {
+    width: 100%;
+}
+
+.check-field {
+    z-index: -1;
+	opacity: 0;
+	margin: 10px 0 0 20px;
+}
+
+.check-field:checked + .label-div:before, 
+.check-field:not(:checked) + .label-div:before {
+    content: "";
+    position: absolute;
+    left: 170px;
+    top: 7px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.check-field:checked + .label-div:after, 
+.check-field:not(:checked) + .label-div:after {
+    content: "";
+    position: absolute;
+    left: 175px;
+    top: 9px;
+    width: 10px;
+    height: 10px;
+    border-radius: 1px;
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.check-field:not(:checked) + .label-div:after {
+    opacity: 0;
+}
+
+.check-field:checked + .label-div:after {
+    opacity: 1;
+}
+
+.empty-form p{
+    display: block;
+    width: 100px;
+    height: 60px;
+    background-color: yellow;
+    border-radius: 12px;
+    font-size: 15px;
+    text-align: center;
+    color: red;
+}
