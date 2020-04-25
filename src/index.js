@@ -114,6 +114,12 @@ const onInput = (e) => {
     } else {
       filterHint.classList.add('hint-not-found');
     }
+    if (!form.value) {
+      for (let i = 0; i < taskAr.length; i++) {
+        allTasks[i].classList.remove('div-remove');
+      }
+      filterHint.classList.add('hint-not-found');
+    }
   }
 };
 
